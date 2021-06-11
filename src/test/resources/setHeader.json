@@ -1,0 +1,31 @@
+{
+  "id" : "5ea4a730c8f8034464a2fa38",
+  "date" : {
+    "nano" : 701051000,
+    "year" : 2020,
+    "monthValue" : 4,
+    "dayOfMonth" : 25,
+    "hour" : 23,
+    "minute" : 10,
+    "second" : 8,
+    "month" : "APRIL",
+    "dayOfWeek" : "SATURDAY",
+    "dayOfYear" : 116,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "header" : {
+    "from" : "daniel.mikes@kvk.nl",
+    "replyTo" : "daniel.mikes@kvk.nl",
+    "to" : [ "daniel.mikes@kvk.nl" ],
+    "subject" : "setHeader"
+  },
+  "body" : {
+    "text" : "text"
+  },
+  "attach" : {
+    "file" : [ "/Users/dm/Documents/KVK/Code/MailService/file.gif", "/Users/dm/Documents/KVK/Code/MailService/file.html", "/Users/dm/Documents/KVK/Code/MailService/file.jpg", "/Users/dm/Documents/KVK/Code/MailService/file.pdf", "/Users/dm/Documents/KVK/Code/MailService/file.png", "/Users/dm/Documents/KVK/Code/MailService/file.rtf", "/Users/dm/Documents/KVK/Code/MailService/file.txt" ]
+  }
+}

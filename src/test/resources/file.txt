@@ -1,0 +1,13 @@
+Afspraken team PaperPlane
+27-03-2020
+We gaan de volgende onderwerpen verder bestuderen en richten ons nu niet te veel op code schrijven:
+â¢ PSA rondsturen voorbeeld, Jolanthe
+â¢ Architect vragen om een voorbeeld van een PSA, Arnout
+â¢ Persistence, Boudy
+â¢ Java naar JSON mbv Jackson, Daniel
+â¢ Client info vastleggen, Jolanthe
+â¢ Code van Lei (SOAP) bekijken, Jolanthe
+â¢ Voorbeeld van site mailgun.com delen, Daniel
+â¢ Trello als alternatief voorstellen aan PO, Arnout
+â¢ Tweezijdige SSL authenticatie, Arnout
+â¢ Andere vormen van authenticatie, Wie?

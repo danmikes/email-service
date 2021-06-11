@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "b506a5c9-9abb-4217-b74a-f6aa547828bd",
+		"name": "Project 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Save Mime With Attachment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "json",
+							"value": "{\n  \"from\" : \"jolanthe.machgeels@kvk.nl\",\n  \"replyTo\" : \"jolanthe.machgeels@kvk.nl\",\n  \"to\" : [ \"jolanthe.machgeels@kvk.nl\" ],\n  \"cc\" : [\"jolanthe.machgeels@kvk.nl\",\"jolanthe.machgeels@kvk.nl\"],\n  \"bcc\" : [\"jolanthe.machgeels@kvk.nl\"],\n  \"subject\" : \"saveMime\",\n  \"text\" : \"text\"\n}",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/dbxjma0/Downloads/FBG.jpg"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/mimebericht",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"mimebericht"
+					],
+					"query": [
+						{
+							"key": "json",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "mail",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Save Simple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"from\" : \"jolanthe.machgeels@kvk.nl\",\r\n  \"replyTo\" : \"jolanthe.machgels@kvk.nl\",\r\n  \"to\" : [ \"jolanthe.machgels@kvk.nl\" ],\r\n  \"cc\" : [\"jolanthe.machgels@kvk.nl\",\"jolanthe.machgels@kvk.nl\"],\r\n  \"bcc\" : [\"jolanthe.machgels@kvk.nl\"],\r\n  \"subject\" : \"saveSimple\",\r\n  \"text\" : \"DOETDEDATABASEHET\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/mail/simple",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"mail",
+						"simple"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,52 @@
+datum: 17-3-2020
+Decodeerder() decodeert de inputFile en schrijft de nieuwe file in de map target. 
+
+public static void Decodeerder() throws IOException {
+        // load file from /src/resources
+        ClassLoader classLoader = FileToBase64StringConv.class.getClassLoader();
+        File inputFile = new File(classLoader
+                .getResource(inputFilePath)
+                .getFile());
+        String fileContent = FileUtils.readFileToString(inputFile);
+
+        // create output file - in de map target
+        File outputFile = new File(inputFile
+                .getParentFile()
+                .getAbsolutePath() + File.pathSeparator + outputFilePath);
+
+        // decode the string and write to file
+        byte[] decodedBytes = Base64
+                .getDecoder()
+                .decode(fileContent);
+        FileUtils.writeByteArrayToFile(outputFile, decodedBytes);
+
+    }
+
+bron: baeldung.com
+fileToBase64StringConversion() codeert de inputFile (inputfilePath) naar een encodedString, maakt een nieuwe outputFile en schrijft daar de decodedBytes in zodat het plaatje weer als jpg immage kan worden bekeken.
+
+public static void fileToBase64StringConversion() throws IOException {
+        // load file from /src/test/resources
+        ClassLoader classLoader = FileToBase64StringConv.class.getClassLoader();
+        File inputFile = new File(classLoader
+                .getResource(inputFilePath)
+                .getFile());
+
+        byte[] fileContent = FileUtils.readFileToByteArray(inputFile);
+        String encodedString = Base64
+                .getEncoder()
+                .encodeToString(fileContent);
+
+        // create output file - in de map target
+        File outputFile = new File(inputFile
+                .getParentFile()
+                .getAbsolutePath() + File.pathSeparator + outputFilePath);
+
+        // decode the string and write to file
+        byte[] decodedBytes = Base64
+                .getDecoder()
+                .decode(encodedString);
+        FileUtils.writeByteArrayToFile(outputFile, decodedBytes);
+
+    }
+

@@ -1,0 +1,26 @@
+import org.mockito.Mock;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.*;
+ 
+
+    @Mock
+
+//    @Autowired
+
+    MailRepository repository;
+
+
+
+    @Test
+    public void saveMailToMongoDBMock() {
+        Mail mongoDBTestMail = new Mail();
+        mongoDBTestMail.setFrom(actor);
+        mongoDBTestMail.setTo(toOneList);
+        mongoDBTestMail.setSubject("saveMailToMongoDBMock");
+// onderstaande regel voert een mock (fake) test uit
+//in zijn review comments vermeldt BastiÃ«n dat er een onderscheid is tussen insert en save, volgens mij is save alleen bij een update van een bestaand document (mailbericht)
+        when(repository.insert(mongoDBTestMail)).thenReturn(mongoDBTestMail);
+        assertEquals(mongoDBTestMail, repository.insert(mongoDBTestMail));
+//onderstaande regel checkt of de repo maar 1x aangeroepen wordt voor deze test
+        verify(repository, times(1)).insert(mongoDBTestMail);
+    }

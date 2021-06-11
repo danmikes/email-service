@@ -1,0 +1,12 @@
+{
+  "header" : {
+    "from" : "boudewijn.van.beckhoven@kvk.nl",
+    "replyTo" : "boudewijn.van.beckhoven@kvk.nl",
+    "to" : [ "boudewijn.van.beckhoven@kvk.nl" ],
+    "subject" : "sendSimple"
+  },
+  "body" : {
+    "text" : "text"
+  },
+  "attach" : { }
+}

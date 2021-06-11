@@ -1,0 +1,14 @@
+{
+  "header" : {
+    "from" : "daniel.mikes@kvk.nl",
+    "replyTo" : "daniel.mikes@kvk.nl",
+    "to" : [ "daniel.mikes@kvk.nl", "daniel.mikes@kvk.nl" ],
+    "cc" : [ "daniel.mikes@kvk.nl", "daniel.mikes@kvk.nl" ],
+    "bcc" : [ "daniel.mikes@kvk.nl", "daniel.mikes@kvk.nl" ],
+    "subject" : "sendSimpleToMany"
+  },
+  "body" : {
+    "text" : "text"
+  },
+  "attach" : { }
+}

@@ -1,0 +1,571 @@
+{
+	"info": {
+		"_postman_id": "3ee44f60-da65-43c0-b887-22a7584ab446",
+		"name": "MailServiceTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sendSimple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/simple",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"simple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeAddTxt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\",\n    \"file\": \"file.txt\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeBccOne",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"from\" : \"daniel.mikes@kvk.nl\",\n  \"replyTo\" : \"daniel.mikes@kvk.nl\",\n  \"to\" : [ \"daniel.mikes@kvk.nl\" ],\n  \"bcc\" : [ \"daniel.mikes@kvk.nl\" ],\n  \"subject\" : \"sendMimeBccOne\",\n  \"text\" : \"text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeBccTwo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"from\" : \"daniel.mikes@kvk.nl\",\n  \"replyTo\" : \"daniel.mikes@kvk.nl\",\n  \"to\" : [ \"daniel.mikes@kvk.nl\" ],\n  \"cc\" : [ \"daniel.mikes@kvk.nl\", \"daniel.mikes@kvk.nl\" ],\n  \"subject\" : \"sendMimeBccTwo\",\n  \"text\" : \"text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeCcOne",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"from\" : \"daniel.mikes@kvk.nl\",\n  \"replyTo\" : \"daniel.mikes@kvk.nl\",\n  \"to\" : [ \"daniel.mikes@kvk.nl\" ],\n  \"cc\" : [ \"daniel.mikes@kvk.nl\" ],\n  \"subject\" : \"sendMimeCcOne\",\n  \"text\" : \"text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeCcTwo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"from\" : \"daniel.mikes@kvk.nl\",\n  \"replyTo\" : \"daniel.mikes@kvk.nl\",\n  \"to\" : [ \"daniel.mikes@kvk.nl\" ],\n  \"cc\" : [ \"daniel.mikes@kvk.nl\", \"daniel.mikes@kvk.nl\" ],\n  \"subject\" : \"sendMimeCcTwo\",\n  \"text\" : \"text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeToTwo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeAddRtf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\",\n    \"file\": \"file.rtf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeAddHtml",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\",\n    \"file\": \"file.html\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeAddGif",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\",\n    \"file\": \"file.gif\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeAddJpg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\",\n    \"file\": \"file.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeAddPng",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\",\n    \"file\": \"file.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeAddPdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\",\n    \"file\": \"file.pdf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeAddList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"test\",\n    \"file\": [\n    \t\"file.gif\",\n    \t\"file.html\",\n    \t\"file.jpg\",\n    \t\"file.pdf\",\n    \t\"file.png\",\n    \t\"file.rtf\",\n    \t\"file.txt\"\n    \t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeBodyTxt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"file.txt\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeBodyHtml",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"file.html\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeBodyRtf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"file.rtf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeInlineHtml",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"file.html\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/mail/mime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"mime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMimeInlineRtf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"daniel.mikes@kvk.nl\",\n    \"replyTo\": \"daniel.mikes@kvk.nl\",\n    \"to\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"cc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"bcc\": [\n        \"daniel.mikes@kvk.nl\"\n    ],\n    \"subject\": \"sendMime\",\n    \"text\": \"file.rtf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
